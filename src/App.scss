@@ -1,0 +1,10 @@
+$background-color: #2A2D34;
+$second-color: rgba(48, 197, 255, 1);
+
+.App {
+    text-align: center;
+    background-color: $background-color;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+}

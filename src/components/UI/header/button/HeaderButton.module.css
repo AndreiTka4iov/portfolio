@@ -1,0 +1,21 @@
+.btnA {
+  display: flex;
+  width: 100px;
+  height: 60px;
+  margin: 0 6px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: color 0.3s;
+  opacity: 0;
+}
+.btnA:hover {
+  color: rgb(48, 197, 255);
+}
+.btnA.active {
+  color: rgb(48, 197, 255);
+}/*# sourceMappingURL=HeaderButton.module.css.map */
