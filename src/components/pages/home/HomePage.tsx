@@ -9,8 +9,9 @@ function HomePage() {
 
     React.useEffect(() => {
         const typed = new Typed(el.current, {
-          strings: ['Fronend Developer'],
+          strings: ['Fronend Developer', 'Junior Developer'],
           typeSpeed: 100,
+          loop: true
         });
     
         return () => {
@@ -20,7 +21,7 @@ function HomePage() {
       }, []);
 
   return (
-    <section className={classes.home}>
+    <section className={classes.home} id="home">
         <div className={classes.homeContent}>
           <h3>Hello, it's Me</h3>
           <h1>Andrey Tkachev</h1>
@@ -29,13 +30,13 @@ function HomePage() {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veniam distinctio quas dolore voluptatum vero!
           </p>
           <div className={classes.socialMedia}>
-            <a href="">
+            <a href="https://vk.com/tcka4">
               <i className='bx bxl-vk'></i>
             </a>
-            <a href="">
+            <a href="https://t.me/Tcka4">
               <i className='bx bxl-telegram' ></i>
             </a>
-            <a href="">
+            <a href="https://github.com/AndreiTka4iov">
               <i className='bx bxl-github' ></i>
             </a>
             <a href="">

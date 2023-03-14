@@ -1,4 +1,5 @@
-$background-color: #2A2D34;
+$background-color: #1f242d;
+$second-background: #2A2D34;
 $second-color: rgba(48, 197, 255, 1);
 
 .home{
@@ -92,6 +93,11 @@ $second-color: rgba(48, 197, 255, 1);
             opacity: 0;
             animation: slideBottom 1s ease forwards;
             animation-delay: 1.2s;
+            transition: .3s;
+
+            &:hover{
+                box-shadow: 0 0 0;
+            }
         }
     }
 
@@ -101,6 +107,68 @@ $second-color: rgba(48, 197, 255, 1);
             opacity: 0;
             animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
             animation-delay: 1.2s, 3s;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .home{
+        flex-direction: column;
+        padding-top: 120px;
+        height: calc(100vh - 120px);
+    
+        .homeContent{
+            width: 100%;
+        }
+    
+        .homeImg{
+            img{
+                max-width: 450px;
+                opacity: 0;
+                animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+                animation-delay: 1.2s, 3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .home{
+        .homeContent{
+            h3{
+                font-size: 25px;
+            }
+    
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home{    
+        .homeImg{
+            img{
+                max-width: 300px;
+                opacity: 0;
+                animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+                animation-delay: 1.2s, 3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 820px) {
+    .home{    
+        .homeImg{
+            display: none;
         }
     }
 }

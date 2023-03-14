@@ -62,7 +62,7 @@
 }
 .home .homeContent .socialMedia a:hover {
   background: rgb(48, 197, 255);
-  color: #2A2D34;
+  color: #1f242d;
   box-shadow: 0 0 20px rgb(48, 197, 255);
 }
 .home .homeContent .btn {
@@ -72,13 +72,17 @@
   border-radius: 40px;
   box-shadow: 0 0 10px rgb(48, 197, 255);
   font-size: 16px;
-  color: #2A2D34;
+  color: #1f242d;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
   animation-delay: 1.2s;
+  transition: 0.3s;
+}
+.home .homeContent .btn:hover {
+  box-shadow: 0 0 0;
 }
 .home .homeImg img {
   max-width: 450px;
@@ -87,6 +91,48 @@
   animation-delay: 1.2s, 3s;
 }
 
+@media screen and (max-width: 1000px) {
+  .home {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 865px) {
+  .home {
+    flex-direction: column;
+    padding-top: 120px;
+    height: calc(100vh - 120px);
+  }
+  .home .homeContent {
+    width: 100%;
+  }
+  .home .homeImg img {
+    max-width: 450px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 1.2s, 3s;
+  }
+}
+@media screen and (max-width: 470px) {
+  .home .homeContent h3 {
+    font-size: 25px;
+  }
+  .home .homeContent h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home .homeImg img {
+    max-width: 300px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 1.2s, 3s;
+  }
+}
+@media screen and (max-height: 820px) {
+  .home .homeImg {
+    display: none;
+  }
+}
 @keyframes slideBottom {
   0% {
     opacity: 0;

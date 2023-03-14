@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
-import Header from './components/UI/header/Header';
-import HomePage from './components/UI/home/HomePage';
+import AboutMe from './components/pages/about/AboutMe';
+import Header from './components/pages/header/Header';
+import HomePage from './components/pages/home/HomePage';
+import MySkills from './components/pages/skills/MySkills';
 
-var myImg = ''
-
-function App() {
+function App() {  
   return (
     <div className="App">
       <Header/>
       <HomePage/>
+      <AboutMe/>
+      <MySkills/>
     </div>
   );
 }

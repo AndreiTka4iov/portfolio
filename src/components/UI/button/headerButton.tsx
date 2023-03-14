@@ -5,13 +5,14 @@ interface childrenType {
     children?: React.ReactNode;
     active: boolean;
     style?: any;
+    href?: any;
 }
 
 const HeaderButton : FC<childrenType> = ({children, active, ...props}) => {
   return (
-    <div {...props} className={active ? classes.btnA + ' ' + classes.active : classes.btnA}>
+    <a {...props} className={active ? classes.btnA + ' ' + classes.active : classes.btnA}>
       {children}
-    </div>
+    </a>
   )
 }
 

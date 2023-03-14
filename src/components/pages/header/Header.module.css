@@ -1,0 +1,112 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: #1f242d;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+}
+header h2 {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+header .flexHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+}
+header .flexHeader .rightBtn {
+  display: flex;
+  align-items: center;
+}
+header .flexHeader .rightBtn a {
+  display: inline-flex;
+  text-decoration: none;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+header .flexHeader .burgerMenu {
+  display: none;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: 2s;
+}
+
+@media screen and (max-width: 1000px) {
+  header .flexHeader {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .flexHeader {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 800px) {
+  header .flexHeader {
+    width: 95%;
+  }
+  header .flexHeader .rightBtn {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 95%;
+    padding: 0 2.5%;
+    display: flex;
+    flex-direction: column;
+    background: #1f242d;
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+  header .flexHeader .rightBtn a {
+    width: 100%;
+    justify-content: left;
+  }
+  header .flexHeader .rightBtn.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  header .flexHeader .burgerMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  header .flexHeader .burgerMenu:hover {
+    color: rgb(48, 197, 255);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Header.module.css.map */
