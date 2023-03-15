@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { useActions } from '../../../hooks/useAction'
 import { useTypesSelector } from '../../../hooks/useTypesSelector'
 import HeaderButton from '../../UI/button/headerButton'
@@ -10,7 +10,9 @@ function Header() {
 
   useEffect(()=>{
     fetchBurger(show)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show])
+  
   return (
     <header>
         <div className={cl.flexHeader}>
@@ -18,7 +20,7 @@ function Header() {
           <nav className={show ? cl.rightBtn + ' ' + cl.show : cl.rightBtn }>
             <HeaderButton active={true} style={{'--i': '1'}} href="#home">Home</HeaderButton>
             <HeaderButton active={false} style={{'--i': '2'}} href="#about">About</HeaderButton>
-            <HeaderButton active={false} style={{'--i': '3'}}>Skills</HeaderButton>
+            <HeaderButton active={false} style={{'--i': '3'}} href="#skills">Skills</HeaderButton>
             <HeaderButton active={false} style={{'--i': '4'}}>Works</HeaderButton>
             <HeaderButton active={false} style={{'--i': '5'}}>Contact</HeaderButton>
           </nav>

@@ -27,11 +27,11 @@ function HomePage() {
           <h1>Andrey Tkachev</h1>
           <h3>And I'm a <span ref={el}></span></h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint veniam distinctio quas dolore voluptatum vero!
+            I am from Moscow. I've been engaged in frontend development for over a year.
           </p>
           <div className={classes.socialMedia}>
-            <a href="https://vk.com/tcka4">
-              <i className='bx bxl-vk'></i>
+            <a href="https://discord.com/users/239443966586519554">
+              <i className='bx bxl-discord-alt' ></i>
             </a>
             <a href="https://t.me/Tcka4">
               <i className='bx bxl-telegram' ></i>
@@ -39,11 +39,11 @@ function HomePage() {
             <a href="https://github.com/AndreiTka4iov">
               <i className='bx bxl-github' ></i>
             </a>
-            <a href="">
+            <a href="https://vk.com/tcka4">
               <i className='bx bxl-linkedin' ></i>
             </a>
           </div>
-          <a href="" className={classes.btn}>Download CV</a>
+          <a href="https://vk.com/tcka4" className={classes.btn}>Download CV</a>
         </div>
         <div className={classes.homeImg}>
           <img src='/images/MyImage.png' alt=""/>
