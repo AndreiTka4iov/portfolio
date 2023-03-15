@@ -21,7 +21,7 @@ function Header() {
             <HeaderButton active={true} style={{'--i': '1'}} href="#home">Home</HeaderButton>
             <HeaderButton active={false} style={{'--i': '2'}} href="#about">About</HeaderButton>
             <HeaderButton active={false} style={{'--i': '3'}} href="#skills">Skills</HeaderButton>
-            <HeaderButton active={false} style={{'--i': '4'}}>Works</HeaderButton>
+            <HeaderButton active={false} style={{'--i': '4'}} href="#works">Works</HeaderButton>
             <HeaderButton active={false} style={{'--i': '5'}}>Contact</HeaderButton>
           </nav>
           {show 

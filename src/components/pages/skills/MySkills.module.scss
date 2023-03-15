@@ -3,13 +3,13 @@ $background-second: #2A2D34;
 $second-color: rgba(48, 197, 255, 1);
 
 .MySkills{
-    padding-top: 60px;
+    padding-top: 20px;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 20px);
     background-color: $background;
 
     h3{
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
         font-size: 42px;
         span{
             color: $second-color;
@@ -31,8 +31,14 @@ $second-color: rgba(48, 197, 255, 1);
             background: $background-second;
             padding: 3rem 2rem 4rem;
             border-radius: 2rem;
+            border: 2px solid transparent;
             max-width: 20%;
             height: 600px;
+            transition: .3s;
+
+            &:hover{
+                border: 2px solid $second-color;
+            }
 
             .icon{
                 font-size: 7rem;

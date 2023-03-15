@@ -1,0 +1,99 @@
+.myWorks {
+  width: 100%;
+  height: calc(100vh - 20px);
+  padding-top: 20px;
+  background: #2A2D34;
+}
+.myWorks h2 {
+  margin-bottom: 4rem;
+  font-size: 42px;
+}
+.myWorks h2 span {
+  color: rgb(48, 197, 255);
+}
+.myWorks .projects {
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.myWorks .projects .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 30rem;
+  background: #1f242d;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  border: 2px solid transparent;
+  max-width: 20%;
+  height: 600px;
+  transition: 0.3s;
+}
+.myWorks .projects .card:hover {
+  border: 2px solid rgb(48, 197, 255);
+}
+.myWorks .projects .card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 2rem;
+  border: 1px solid grey;
+}
+.myWorks .projects .card h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.myWorks .projects .card p {
+  display: inline-block;
+  width: 100%;
+  font-size: 25px;
+  margin: 0;
+}
+.myWorks .projects .card .btn {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+.myWorks .projects .card .btn .git {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(48, 197, 255);
+  border-radius: 50%;
+  color: rgb(48, 197, 255);
+  text-decoration: none;
+  transition: 0.5s;
+}
+.myWorks .projects .card .btn .git:hover {
+  background: rgb(48, 197, 255);
+  color: #2A2D34;
+  box-shadow: 0 0 20px rgb(48, 197, 255);
+}
+.myWorks .projects .card .btn .whatch {
+  display: inline-block;
+  padding: 12px 28px;
+  width: -moz-max-content;
+  width: max-content;
+  background: rgb(48, 197, 255);
+  border-radius: 40px;
+  box-shadow: 0 0 0;
+  font-size: 16px;
+  color: #2A2D34;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.myWorks .projects .card .btn .whatch:hover {
+  box-shadow: 0 0 10px rgb(48, 197, 255);
+}/*# sourceMappingURL=Myworks.module.css.map */

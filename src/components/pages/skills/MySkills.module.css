@@ -1,11 +1,11 @@
 .MySkills {
-  padding-top: 60px;
+  padding-top: 20px;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 20px);
   background-color: #1f242d;
 }
 .MySkills h3 {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   font-size: 42px;
 }
 .MySkills h3 span {
@@ -26,8 +26,13 @@
   background: #2A2D34;
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
+  border: 2px solid transparent;
   max-width: 20%;
   height: 600px;
+  transition: 0.3s;
+}
+.MySkills .skills .skill:hover {
+  border: 2px solid rgb(48, 197, 255);
 }
 .MySkills .skills .skill .icon {
   font-size: 7rem;
