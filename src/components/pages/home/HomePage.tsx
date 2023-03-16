@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 import classes from './HomePage.module.css'
 import Typed from 'typed.js';
+import { useInView } from 'react-intersection-observer';
 
 
-
-function HomePage() {
+const HomePage = () => {
     const el = React.useRef(null);
 
     React.useEffect(() => {
@@ -20,8 +20,19 @@ function HomePage() {
         };
       }, []);
 
+    const { ref, inView} = useInView({
+      /* Optional options */
+      threshold: .51,
+    });
+
+    if(inView) {
+      document.querySelector(`a[href='#home']`)?.classList.add('activeNav')
+    } else {
+      document.querySelector(`a[href='#home']`)?.classList.remove('activeNav')
+    }
+
   return (
-    <section className={classes.home} id="home">
+    <section className={classes.home} id="home" ref={ref}>
         <div className={classes.homeContent}>
           <h3>Hello, it's Me</h3>
           <h1>Andrey Tkachev</h1>

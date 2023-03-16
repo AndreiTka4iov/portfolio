@@ -1,7 +1,7 @@
 .MySkills {
-  padding-top: 20px;
+  padding: 20px 0;
   width: 100%;
-  height: calc(100vh - 20px);
+  min-height: calc(100vh - 20px);
   background-color: #1f242d;
 }
 .MySkills h3 {
@@ -28,6 +28,7 @@
   border-radius: 2rem;
   border: 2px solid transparent;
   max-width: 20%;
+  min-width: 300px;
   height: 600px;
   transition: 0.3s;
 }
@@ -67,4 +68,32 @@
 }
 .MySkills .skills .skill a:hover {
   box-shadow: 0 0 0;
+}
+
+@media screen and (max-width: 790px) {
+  .MySkills .skills .skill {
+    max-width: 60%;
+    min-width: 60%;
+    padding: 2rem 1rem 3rem;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .MySkills .skills .skill ul {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .MySkills .skills .skill {
+    max-width: 80%;
+    min-width: 80%;
+  }
+  .MySkills .skills .skill .icon {
+    font-size: 5rem;
+  }
+  .MySkills .skills .skill h3 {
+    font-size: 25px;
+  }
+  .MySkills .skills .skill ul {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=MySkills.module.css.map */

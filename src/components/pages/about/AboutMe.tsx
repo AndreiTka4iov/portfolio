@@ -1,9 +1,20 @@
 import React from 'react'
 import classes from './AboutMe.module.css'
+import { useInView } from 'react-intersection-observer';
 
-function AboutMe() {
+const AboutMe = () => {
+  const { ref, inView} = useInView({
+    /* Optional options */
+    threshold: .51,
+  });
+
+  if(inView) {
+    document.querySelector(`a[href='#about']`)?.classList.add('activeNav')
+  } else {
+    document.querySelector(`a[href='#about']`)?.classList.remove('activeNav')
+  }
   return (
-    <section className={classes.aboutMe} id='about'>
+    <section className={classes.aboutMe} id='about' ref={ref}>
       <div className={classes.flexAbout}>
         <div className={classes.imgBlock}>
           <img src="/images/MyImage.png" alt="" />

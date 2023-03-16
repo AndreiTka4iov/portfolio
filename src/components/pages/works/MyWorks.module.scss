@@ -3,8 +3,9 @@ $second-background: #2A2D34;
 $second-color: rgba(48, 197, 255, 1);
 
 .myWorks{
+    max-width: 100%;
     width: 100%;
-    height: calc(100vh - 20px);
+    min-height: calc(100vh - 20px);
     padding-top: 20px;
     background: $second-background;
 
@@ -17,8 +18,7 @@ $second-color: rgba(48, 197, 255, 1);
     }
 
     .projects{
-        width: 80%;
-        height: 500px;
+        height: fit-content; 
         margin: auto;
         display: flex;
         justify-content: center;
@@ -36,6 +36,7 @@ $second-color: rgba(48, 197, 255, 1);
             border-radius: 2rem;
             border: 2px solid transparent;
             max-width: 20%;
+            min-width: 300px;
             height: 600px;
             transition: .3s;
 
@@ -50,67 +51,181 @@ $second-color: rgba(48, 197, 255, 1);
                 border: 1px solid grey;
             }
 
-            h1{
-                font-size: 32px;
-                font-weight: 700;
-                margin: 20px 0;
-            }
-
-            p{
-                display: inline-block;
-                width: 100%;
-                font-size: 25px;
-                margin: 0;
-            }
-
-            .btn{
-                margin-top: auto;
+            .flexDescr{
                 display: flex;
-                justify-content: space-between;
-                align-items: end;
-                width: 100%;
+                flex-direction: column;
+                height: inherit;
 
-                .git{
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 40px;
-                    height: 40px;
-                    background: transparent;
-                    border: 2px solid $second-color;
-                    border-radius: 50%;
-                    color: $second-color;
+                h1{
+                    font-size: 32px;
+                    font-weight: 700;
+                    margin: 20px 0;
+                }
+    
+                p{
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 25px;
+                    margin: 0;
+                }
+    
+                .btn{
+                    margin-top: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: end;
+                    width: 100%;
+    
+                    .git{
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        background: transparent;
+                        border: 2px solid $second-color;
+                        border-radius: 50%;
+                        color: $second-color;
+                        text-decoration: none;
+                        transition: .5s;
+    
+                        &:hover{
+                            background: $second-color;
+                            color: $second-background;
+                            box-shadow: 0 0 20px $second-color;
+                        }
+                    }
+    
+                   .whatch{
+                    display: inline-block;
+                    padding: 12px 28px;
+                    width: max-content;
+                    background: $second-color;
+                    border-radius: 40px;
+                    box-shadow: 0 0 0;
+                    font-size: 16px;
+                    color: $second-background;
+                    letter-spacing: 1px;
                     text-decoration: none;
-                    transition: .5s;
+                    font-weight: 600;
+                    transition: .3s;
+    
+                        &:hover{
+                            box-shadow: 0 0 10px $second-color;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
 
-                    &:hover{
-                        background: $second-color;
-                        color: $second-background;
-                        box-shadow: 0 0 20px $second-color;
+@media screen and (max-width: 790px) {
+    .myWorks{    
+        .projects{
+            width: 100%;
+            flex-direction: column;
+            
+    
+            .card{
+                flex-direction: row;
+                max-width: fit-content;
+                width: 80%;
+                max-height: 250px;
+    
+                &:hover{
+                    border: 2px solid $second-color;
+                }
+    
+                img{
+                    width: 250px;
+                    height: 250px;
+                }
+                .flexDescr{
+                    justify-content: space-between;
+                    margin-left: 20px;
+                    height: 250px;
+
+                    h1{
+                        margin-top: 0;
+                    }
+
+                    p{
+                        width: 100%;
+                        font-size: 25px;
+                        margin: 0;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
                     }
                 }
-
-               .whatch{
-                display: inline-block;
-                padding: 12px 28px;
-                width: max-content;
-                background: $second-color;
-                border-radius: 40px;
-                box-shadow: 0 0 0;
-                font-size: 16px;
-                color: $second-background;
-                letter-spacing: 1px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: .3s;
-
-                    &:hover{
-                        box-shadow: 0 0 10px $second-color;
-                    }
-                } 
             }
+        }
+    }
+}
 
-            
+@media screen and (max-width: 650px) {
+    .myWorks{    
+        .projects{    
+            .card{
+                .flexDescr{
+                    h1{
+                        font-size: 25px;
+                    }
+
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .myWorks{        
+        .projects{    
+            .card{
+                flex-direction: column;
+                max-width: 60%;
+                max-height: fit-content;
+                height: fit-content;
+    
+                img{
+                    width: 290px;
+                    height: 290px;
+                }
+    
+                .flexDescr{    
+                    margin: 0;
+
+                    h1{
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .myWorks{        
+        .projects{    
+            .card{
+                min-width: 80%;
+                max-width: 80%;
+
+                img{
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .flexDescr{
+                    height: -webkit-fill-available;
+                    width: 100%;
+                }
+            }
         }
     }
 }

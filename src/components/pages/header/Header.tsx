@@ -18,11 +18,10 @@ function Header() {
         <div className={cl.flexHeader}>
           <h2>Portfolio.</h2>
           <nav className={show ? cl.rightBtn + ' ' + cl.show : cl.rightBtn }>
-            <HeaderButton active={true} style={{'--i': '1'}} href="#home">Home</HeaderButton>
-            <HeaderButton active={false} style={{'--i': '2'}} href="#about">About</HeaderButton>
-            <HeaderButton active={false} style={{'--i': '3'}} href="#skills">Skills</HeaderButton>
-            <HeaderButton active={false} style={{'--i': '4'}} href="#works">Works</HeaderButton>
-            <HeaderButton active={false} style={{'--i': '5'}}>Contact</HeaderButton>
+            <HeaderButton style={{'--i': '1'}} href="#home">Home</HeaderButton>
+            <HeaderButton style={{'--i': '2'}} href="#about">About</HeaderButton>
+            <HeaderButton style={{'--i': '3'}} href="#skills">Skills</HeaderButton>
+            <HeaderButton style={{'--i': '4'}} href="#works">Works</HeaderButton>
           </nav>
           {show 
           ? <div className={cl.burgerMenu} onClick={()=> setShowBurger(false)}>

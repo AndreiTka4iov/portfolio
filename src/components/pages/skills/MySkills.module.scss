@@ -3,9 +3,9 @@ $background-second: #2A2D34;
 $second-color: rgba(48, 197, 255, 1);
 
 .MySkills{
-    padding-top: 20px;
+    padding: 20px 0;
     width: 100%;
-    height: calc(100vh - 20px);
+    min-height: calc(100vh - 20px);
     background-color: $background;
 
     h3{
@@ -33,6 +33,7 @@ $second-color: rgba(48, 197, 255, 1);
             border-radius: 2rem;
             border: 2px solid transparent;
             max-width: 20%;
+            min-width: 300px;
             height: 600px;
             transition: .3s;
 
@@ -76,6 +77,47 @@ $second-color: rgba(48, 197, 255, 1);
                 &:hover{
                     box-shadow: 0 0 0;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .MySkills{    
+        .skills{    
+            .skill{
+                max-width: 60%;
+                min-width: 60%;
+                padding: 2rem 1rem 3rem;
+                height: fit-content;
+
+                ul{
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .MySkills{    
+        .skills{
+            .skill{
+                max-width: 80%;
+                min-width: 80%;
+
+                .icon{
+                    font-size: 5rem;
+                }
+    
+                h3{
+                    font-size: 25px;
+                }
+
+                ul{
+                    font-size: 18px;
+                }
+
             }
         }
     }

@@ -51,4 +51,27 @@
 }
 .aboutMe .flexAbout .aboutText a:hover {
   box-shadow: 0 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .aboutMe .flexAbout {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .aboutMe .flexAbout {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 430px) {
+  .aboutMe .flexAbout .aboutText .heading {
+    font-size: 3rem;
+  }
+  .aboutMe .flexAbout .aboutText h3 {
+    font-size: 1.5rem;
+  }
+  .aboutMe .flexAbout .aboutText p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=AboutMe.module.css.map */

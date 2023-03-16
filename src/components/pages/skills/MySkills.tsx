@@ -1,9 +1,21 @@
 import React from 'react'
 import classes from './MySkills.module.css'
+import { useInView } from 'react-intersection-observer';
 
-function MySkills() {
+const MySkills = () => {
+    const { ref, inView} = useInView({
+        /* Optional options */
+        threshold: .51,
+    });
+
+    if(inView) {
+        document.querySelector(`a[href='#skills']`)?.classList.add('activeNav')
+    } else {
+        document.querySelector(`a[href='#skills']`)?.classList.remove('activeNav')
+    }
+    
   return (
-    <section className={classes.MySkills} id='skills'>
+    <section className={classes.MySkills} id='skills' ref={ref}>
         <h3>My <span>Skills</span></h3>
         <div className={classes.skills}>
             <div className={classes.skill}>

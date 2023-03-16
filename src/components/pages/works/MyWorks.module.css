@@ -1,6 +1,7 @@
 .myWorks {
+  max-width: 100%;
   width: 100%;
-  height: calc(100vh - 20px);
+  min-height: calc(100vh - 20px);
   padding-top: 20px;
   background: #2A2D34;
 }
@@ -12,8 +13,8 @@
   color: rgb(48, 197, 255);
 }
 .myWorks .projects {
-  width: 80%;
-  height: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -31,6 +32,7 @@
   border-radius: 2rem;
   border: 2px solid transparent;
   max-width: 20%;
+  min-width: 300px;
   height: 600px;
   transition: 0.3s;
 }
@@ -43,25 +45,30 @@
   border-radius: 2rem;
   border: 1px solid grey;
 }
-.myWorks .projects .card h1 {
+.myWorks .projects .card .flexDescr {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+.myWorks .projects .card .flexDescr h1 {
   font-size: 32px;
   font-weight: 700;
   margin: 20px 0;
 }
-.myWorks .projects .card p {
+.myWorks .projects .card .flexDescr p {
   display: inline-block;
   width: 100%;
   font-size: 25px;
   margin: 0;
 }
-.myWorks .projects .card .btn {
+.myWorks .projects .card .flexDescr .btn {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: end;
   width: 100%;
 }
-.myWorks .projects .card .btn .git {
+.myWorks .projects .card .flexDescr .btn .git {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,12 +81,12 @@
   text-decoration: none;
   transition: 0.5s;
 }
-.myWorks .projects .card .btn .git:hover {
+.myWorks .projects .card .flexDescr .btn .git:hover {
   background: rgb(48, 197, 255);
   color: #2A2D34;
   box-shadow: 0 0 20px rgb(48, 197, 255);
 }
-.myWorks .projects .card .btn .whatch {
+.myWorks .projects .card .flexDescr .btn .whatch {
   display: inline-block;
   padding: 12px 28px;
   width: -moz-max-content;
@@ -94,6 +101,86 @@
   font-weight: 600;
   transition: 0.3s;
 }
-.myWorks .projects .card .btn .whatch:hover {
+.myWorks .projects .card .flexDescr .btn .whatch:hover {
   box-shadow: 0 0 10px rgb(48, 197, 255);
-}/*# sourceMappingURL=Myworks.module.css.map */
+}
+
+@media screen and (max-width: 790px) {
+  .myWorks .projects {
+    width: 100%;
+    flex-direction: column;
+  }
+  .myWorks .projects .card {
+    flex-direction: row;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    width: 80%;
+    max-height: 250px;
+  }
+  .myWorks .projects .card:hover {
+    border: 2px solid rgb(48, 197, 255);
+  }
+  .myWorks .projects .card img {
+    width: 250px;
+    height: 250px;
+  }
+  .myWorks .projects .card .flexDescr {
+    justify-content: space-between;
+    margin-left: 20px;
+    height: 250px;
+  }
+  .myWorks .projects .card .flexDescr h1 {
+    margin-top: 0;
+  }
+  .myWorks .projects .card .flexDescr p {
+    width: 100%;
+    font-size: 25px;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 650px) {
+  .myWorks .projects .card .flexDescr h1 {
+    font-size: 25px;
+  }
+  .myWorks .projects .card .flexDescr p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .myWorks .projects .card {
+    flex-direction: column;
+    max-width: 60%;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .myWorks .projects .card img {
+    width: 290px;
+    height: 290px;
+  }
+  .myWorks .projects .card .flexDescr {
+    margin: 0;
+  }
+  .myWorks .projects .card .flexDescr h1 {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 415px) {
+  .myWorks .projects .card {
+    min-width: 80%;
+    max-width: 80%;
+  }
+  .myWorks .projects .card img {
+    width: 200px;
+    height: 200px;
+  }
+  .myWorks .projects .card .flexDescr {
+    height: -webkit-fill-available;
+    width: 100%;
+  }
+}/*# sourceMappingURL=MyWorks.module.css.map */

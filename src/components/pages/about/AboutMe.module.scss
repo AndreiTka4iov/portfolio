@@ -66,3 +66,41 @@ $second-color: rgba(48, 197, 255, 1);
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .aboutMe{
+        .flexAbout{
+            width: 95%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+    .aboutMe{
+        .flexAbout{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .aboutMe{    
+        .flexAbout{    
+            .aboutText{
+                .heading{
+                    font-size: 3rem;
+                }
+    
+                h3{
+                    font-size: 1.5rem;
+                }
+    
+                p{
+                    font-size: 14px;
+                }        
+            }
+        }
+    }
+}

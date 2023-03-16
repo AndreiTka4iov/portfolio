@@ -1,16 +1,25 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
+import { useActions } from '../../../hooks/useAction';
+import { useTypesSelector } from '../../../hooks/useTypesSelector';
 import classes from './HeaderButton.module.css'
 
 interface childrenType {
     children?: React.ReactNode;
-    active: boolean;
     style?: any;
     href?: any;
 }
 
-const HeaderButton : FC<childrenType> = ({children, active, ...props}) => {
+const HeaderButton : FC<childrenType> = ({children, ...props}) => {
+  const {show} = useTypesSelector(state => state.burger)
+  const {fetchBurger, setShowBurger} = useActions()
+
+  useEffect(()=>{
+    fetchBurger(show)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [show])
+
   return (
-    <a {...props} className={active ? classes.btnA + ' ' + classes.active : classes.btnA}>
+    <a {...props} className={classes.btnA} onClick={() => setShowBurger(false)}>
       {children}
     </a>
   )
