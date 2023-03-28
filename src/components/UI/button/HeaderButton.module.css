@@ -15,7 +15,4 @@
 }
 .btnA:hover {
   color: rgb(48, 197, 255);
-}
-.btnA.active {
-  color: rgb(48, 197, 255);
 }/*# sourceMappingURL=HeaderButton.module.css.map */

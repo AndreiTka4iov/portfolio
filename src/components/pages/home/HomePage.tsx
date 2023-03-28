@@ -26,9 +26,9 @@ const HomePage = () => {
     });
 
     if(inView) {
-      document.querySelector(`a[href='#home']`)?.classList.add('activeNav')
+      document.querySelector(`a[href='/portfolio/#home']`)?.classList.add('activeNav')
     } else {
-      document.querySelector(`a[href='#home']`)?.classList.remove('activeNav')
+      document.querySelector(`a[href='/portfolio/#home']`)?.classList.remove('activeNav')
     }
 
   return (
@@ -50,14 +50,14 @@ const HomePage = () => {
             <a href="https://github.com/AndreiTka4iov">
               <i className='bx bxl-github' ></i>
             </a>
-            <a href="https://vk.com/tcka4">
+            <a href="https://www.linkedin.com/in/andreiTkachiov/">
               <i className='bx bxl-linkedin' ></i>
             </a>
           </div>
-          <a href="https://vk.com/tcka4" className={classes.btn}>Download CV</a>
+          <a href="https://drive.google.com/file/d/1jWropZI5F2rQSbrvw5dSdYTZxSxgYM44/view" className={classes.btn}>Download CV</a>
         </div>
         <div className={classes.homeImg}>
-          <img src='/images/MyImage.png' alt=""/>
+          <img src='/portfolio/images/MyImage.png' alt=""/>
         </div>
       </section>
   )

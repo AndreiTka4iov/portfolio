@@ -9,9 +9,9 @@ const MySkills = () => {
     });
 
     if(inView) {
-        document.querySelector(`a[href='#skills']`)?.classList.add('activeNav')
+        document.querySelector(`a[href='/portfolio/#skills']`)?.classList.add('activeNav')
     } else {
-        document.querySelector(`a[href='#skills']`)?.classList.remove('activeNav')
+        document.querySelector(`a[href='/portfolio/#skills']`)?.classList.remove('activeNav')
     }
     
   return (
@@ -32,7 +32,7 @@ const MySkills = () => {
                     <li>React</li>
                     <li>Redux</li>
                 </ul>
-                <a href="">
+                <a href="https://drive.google.com/file/d/1jWropZI5F2rQSbrvw5dSdYTZxSxgYM44/view">
                     Read More
                 </a>
             </div>
@@ -48,7 +48,7 @@ const MySkills = () => {
                     <li>MySql</li>
                     <li>Sqlite3</li>
                 </ul>
-                <a href="">
+                <a href="https://drive.google.com/file/d/1jWropZI5F2rQSbrvw5dSdYTZxSxgYM44/view">
                     Read More
                 </a>
             </div>
@@ -63,7 +63,7 @@ const MySkills = () => {
                     <li>Figma</li>
                     <li>Photoshop</li>
                 </ul>
-                <a href="">
+                <a href="https://drive.google.com/file/d/1jWropZI5F2rQSbrvw5dSdYTZxSxgYM44/view">
                     Read More
                 </a>
             </div>
